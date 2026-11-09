@@ -2,6 +2,8 @@
 
 Sistema web simples, feito em Python com Streamlit, para cadastrar vendas, consultá-las em uma tabela e acompanhar o faturamento em um dashboard com gráficos.
 
+**Acesse online:** [sistema-de-vendas-lucas.streamlit.app](https://sistema-de-vendas-lucas.streamlit.app)
+
 ## Sobre o desafio
 
 Projeto da Aula 4 do curso **Jornada Python** ("Sistema de Vendas e Gestão Online"). A proposta era criar um sistema completo para uma empresa com vendedores: registrar cada venda (data, vendedor, produto, quantidade e valor), ver todas as vendas em uma tabela e acompanhar o desempenho por meio de métricas e gráficos.
@@ -59,6 +61,7 @@ O projeto não tem testes automatizados. Eu testei manualmente na própria tela:
 
 - Abrir o sistema: tabela e dashboard carregam com as 120 vendas da base (faturamento de R$ 383.050,00).
 - Cadastrar com quantidade 0: aparece o aviso "Informe uma quantidade maior que zero" e nada é gravado.
+- Cadastrar com valor 0: aparece o aviso "Informe um valor maior que zero" e nada é gravado.
 - Cadastrar uma venda válida: aparece "Venda cadastrada!" e a venda entra no fim da tabela.
 
 ## Prints
@@ -102,4 +105,4 @@ sistema-de-vendas/
 
 - Usar um arquivo CSV como base de dados é uma solução simples, boa para estudo. Não serve para várias pessoas cadastrando ao mesmo tempo e não tem controle de acesso.
 - Os vendedores e os produtos estão fixos no código. Os dados da base são fictícios.
-- Se o sistema for publicado online (por exemplo, no Streamlit Cloud), as vendas cadastradas pelo site podem se perder quando o aplicativo reiniciar, porque o arquivo no servidor é temporário. Para uso real, o ideal seria um banco de dados.
+- No app publicado online (Streamlit Cloud), as vendas cadastradas pelo site são perdidas quando o aplicativo reinicia, porque o arquivo no servidor é temporário; só voltam os arquivos do repositório. Para uso real, o ideal seria um banco de dados.
